@@ -6,7 +6,7 @@
   "scripts": {
     "frontend-install": "npm install --prefix frontend",
     "start": "node server.js",
-    "server": "node server.js",
+    "server": "nodemon server.js",
     "frontend": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
@@ -23,6 +23,7 @@
     "js-file-download": "^0.4.8",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.7.7",
-    "node": "^12.13.0"
+    "node": "^12.13.0",
+    "nodemon": "^1.19.4"
   }
 }
