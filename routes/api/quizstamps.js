@@ -17,7 +17,9 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
 
   const newQuizstamp = new Quizstamp({
-    name: req.body.name
+    name: req.body.name,
+    email: req.body.email,
+    score: req.body.score
   });
 
   newQuizstamp.save().then(quizstamp => res.json(quizstamp)); // make sure you don't have to make this 'quizstamp' and not 'quizdata'

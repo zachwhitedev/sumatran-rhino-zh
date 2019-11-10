@@ -5,6 +5,7 @@ import {
     SET_ERROR,
     SET_SHOW_RESULTS,
     RESET_QUIZ,
+    SUBMIT_FORM
 } from './types.js';
 
 function quizReducer(state, action) {
@@ -42,6 +43,11 @@ function quizReducer(state, action) {
                 currentAnswer: '',
                 showResults: false,
                 error: '',
+            };
+        case SUBMIT_FORM:
+            return {
+                ...state,
+                isSubmitting: action.isSubmitting,
             };
         default:
             return state;
