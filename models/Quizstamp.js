@@ -7,11 +7,11 @@ const QuizstampSchema = new Schema({
         type: String,
         required: true
     },
-    age: {
+    email: {
         type: String,
         required: true
     },
-    answerone: {
+    score: {
         type: String
     },
     date: {
