@@ -8,7 +8,7 @@ function Answers() {
     const question = questions[currentQuestion];
 
     return (
-        <>
+        <div className='button-container'>
             <Answer
                 letter="a"
                 answer={question.answer_a}
@@ -33,7 +33,8 @@ function Answers() {
                 dispatch={dispatch}
                 selected={currentAnswer === 'd'}
             />
-        </>
+        </div>
+
     );
 }
 

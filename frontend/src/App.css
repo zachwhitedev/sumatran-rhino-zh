@@ -1,7 +1,5 @@
-
 body {
     background-color: rgb(218, 217, 216);
-    
 }
 
 h1,
@@ -14,10 +12,28 @@ h2 {
     color: #332b22;
 }
 
+.button-container {
+    text-align: center;
+}
+
+@media only screen and (min-width:723px){
+    .button-container{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+        text-align: -webkit-center;
+    }
+    .answer {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+}
+
 .answer {
     border: 1px solid #3b88ca;
-    padding: 5px 2px 5px 28px;
-    width: 346px;
+    padding: 5px 30px 5px 28px;
+    width: 100%;
     position: relative;
     text-align: left;
 }
@@ -70,6 +86,11 @@ h2 {
     outline: none;
 }
 
+.confirm-button {
+    margin-top: 5px;
+    text-align: left;
+}
+
 .btn-stop {
     color: #4f4c4c;
     background-color: #07d1ff;
@@ -77,7 +98,6 @@ h2 {
     border-radius: 42%;
     box-shadow: 13px 11px 7px #0000009e;
     outline: none;
-    
 }
 .btn-stop:hover {
     color: #4f4c4c;
@@ -88,26 +108,52 @@ h2 {
     outline: none;
 }
 
+.bubble-container {
+    text-align: right;
+    margin-right: 163px;
+}
+
+@media only screen and (min-width: 630px){
+    .bubble-container {
+        margin-right: 205px;
+    }
+}
+
 .hello {
     max-width: 175px;
     margin-top: 20px;
     padding-top: 35px;
 }
 
+.rhino-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -27px;
+}
+/* 
 .goodbye {
     max-width: 175px;
     margin-left: 155px;
     margin-top: -10%;
-}
+} */
 
 .btn:focus {
     outline: none !important;
 }
 
-.grassy {
+.grass-container {
+    text-align: left;
+}
+
+img {
+    width: 11.5em;
+}
+
+/* .grassy {
     max-width: 45%;
     margin-top: -36%;
-}
+} */
 
 .sloppy {
     color: #4f4c4c;
@@ -203,7 +249,3 @@ text-align: center;
     border-radius: 5%;
     background-color: rgb(218, 217, 216);
 }
-
-
-
-

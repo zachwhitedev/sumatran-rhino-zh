@@ -180,12 +180,18 @@ function App() {
           <Question />
           {renderError()}
           <Answers />
+          <div className='confirm-button'>
           <button className="btn btn-stop" onClick={next}>
             Confirm and Continue
                     </button>
+                    </div>
+                    <div className='bubble-container'>
           <img className='hello' src={require("./image/textBubble.png")} alt='hello' />
-          <span><img className='goodbye' src={require("./image/rhino.png")} alt='hello' />
-            <img className='grassy' src={require("./image/grass.png")} alt='hello' /></span>
+          </div>
+          <div className='rhino-container'>
+            <img className='grassy' src={require("./image/grass.png")} alt='hello' />
+          <img className='goodbye' src={require("./image/rhino.png")} alt='hello' />
+            </div>
         </div>
       </QuizContext.Provider>
     );
