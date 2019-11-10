@@ -146,7 +146,11 @@ h2 {
     text-align: left;
 }
 
-img {
+.grassy {
+    width: 11.5em;
+}
+
+.goodbye {
     width: 11.5em;
 }
 
