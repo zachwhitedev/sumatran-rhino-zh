@@ -47,8 +47,8 @@ function quizReducer(state, action) {
         case SUBMIT_FORM:
             return {
                 ...state,
-                isSubmitting: action.isSubmitting
-            }
+                isSubmitting: action.isSubmitting,
+            };
         default:
             return state;
     }

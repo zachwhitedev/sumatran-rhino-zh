@@ -12,7 +12,7 @@ import {
     SET_ERROR,
     SET_SHOW_RESULTS,
     RESET_QUIZ,
-    SUBMIT_FORM
+    SUBMIT_FORM,
 } from './reducers/types.js';
 import quizReducer from './reducers/QuizReducer';
 
@@ -72,7 +72,7 @@ function App() {
     };
 
     const [state, dispatch] = useReducer(quizReducer, initialState);
-    const {currentQuestion, currentAnswer, answers, showResults, error} = state;
+    const {currentQuestion, currentAnswer, answers, showResults, error, isSubmitting} = state;
 
     const question = questions[currentQuestion];
 
@@ -135,26 +135,25 @@ function App() {
         dispatch({type: SET_SHOW_RESULTS, showResults: true});
     };
 
-    function submitForm(){
-      dispatch({
-        type: SUBMIT_FORM,
-        isSubmitting: true
-      })
-    }
+    const submitForm =() => {
+      state.score -= state.score;
+      dispatch({type: SUBMIT_FORM, isSubmitting: true});
+      return;
+    };
 
     if (showResults) {
         return (
             <div className="container results">
                 <h2>Results</h2>
                 <ul>{renderResultsData()}</ul>
-                <h3>Score: {state.score}</h3>
+                <h3>Score: {state.score} </h3>
                 <button className="btn btn-primary" onClick={restart}>
                     Restart
                 </button>
-                <button onclick={() => submitForm()}>
+                <button onClick={submitForm}>
                   Submit Score!
                 </button>
-                {state.isSubmitting ? <SubmitForm /> : null}
+                {isSubmitting ? <SubmitForm userscore={state.score}/> : null}
             </div>
         );
     } else {

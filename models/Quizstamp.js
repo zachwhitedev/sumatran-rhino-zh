@@ -4,15 +4,13 @@ const Schema = mongoose.Schema;
 // Create Schema
 const QuizstampSchema = new Schema({
     name: {
-        type: String,
-        required: true
+        type: String
     },
     email: {
-        type: String,
-        required: true
+        type: String
     },
     score: {
-        type: String
+        type: Number
     },
     date: {
         type: Date,
