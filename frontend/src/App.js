@@ -139,6 +139,7 @@ function App() {
       state.score -= state.score;
       dispatch({type: SUBMIT_FORM, isSubmitting: true});
       return;
+<<<<<<< HEAD
     };
 
     if (showResults) {
@@ -169,6 +170,90 @@ function App() {
                     <Answers />
                     <button className="btn btn-primary" onClick={next}>
                         Submit
+=======
+    }
+
+    return <div className="error">{error}</div>;
+  };
+
+  const renderResultMark = (question, answer) => {
+    if (question.correct_answer === answer.answer) {
+      state.score++;
+      return <span className="correct">Correct</span>;
+    }
+
+    return <span className="failed">Failed</span>;
+  };
+
+  const renderResultsData = () => {
+    return answers.map(answer => {
+      const question = questions.find(
+        question => question.id === answer.questionId
+      );
+
+      return (
+        <div key={question.id}>
+          {question.question} - {renderResultMark(question, answer)}
+        </div>
+      );
+    });
+  };
+
+  const restart = () => {
+    state.score = 0;
+    dispatch({ type: RESET_QUIZ });
+  };
+
+  const next = () => {
+    const answer = { questionId: question.id, answer: currentAnswer };
+
+    if (!currentAnswer) {
+      dispatch({ type: SET_ERROR, error: 'Please select an option' });
+      return;
+    }
+
+    answers.push(answer);
+    dispatch({ type: SET_ANSWERS, answers });
+    dispatch({ type: SET_CURRENT_ANSWER, currentAnswer: '' });
+
+    if (currentQuestion + 1 < questions.length) {
+      dispatch({
+        type: SET_CURRENT_QUESTION,
+        currentQuestion: currentQuestion + 1,
+      });
+      return;
+    }
+
+    dispatch({ type: SET_SHOW_RESULTS, showResults: true });
+  };
+
+  if (showResults) {
+    return (
+      <div className="container results">
+      <img className='' src = {require("./image/cloud_PNG.png")} alt='hello'/>
+        <h2>Results</h2>
+        <ul>{renderResultsData()}</ul>
+        <h3>Score: {state.score}</h3>
+                <button className='sloppy btn'>Submit Score</button>
+        <button className="btn btn-go" onClick={restart}>
+          Restart
+                </button>
+      </div>
+    );
+  } else {
+    return (
+      <QuizContext.Provider value={{ state, dispatch }}>
+        <div className="container">
+          <Progress
+            total={questions.length}
+            current={currentQuestion + 1}
+          />
+          <Question />
+          {renderError()}
+          <Answers />
+          <button className="btn btn-stop" onClick={next}>
+            Confirm and Continue
+>>>>>>> push before zacks rebase
                     </button>
                     <img className='hello' src = {require("./image/textBubble.png")} alt='hello'/>
                     <span><img className='goodbye' src = {require("./image/rhino.png")} alt='hello' />
