@@ -170,8 +170,9 @@ function App() {
                     <button className="btn btn-primary" onClick={next}>
                         Submit
                     </button>
-                    <img className='hello' src = {require("./image/textBubble.png")} />
-                    <img className='goodbye' src = {require("./image/rhino.png")} />
+                    <img className='hello' src = {require("./image/textBubble.png")} alt='hello'/>
+                    <span><img className='goodbye' src = {require("./image/rhino.png")} alt='hello' />
+                    <img className='grassy' src = {require("./image/grass.png")} alt='hello'/></span>
         </div>
       </QuizContext.Provider>
     );
