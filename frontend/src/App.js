@@ -56,6 +56,7 @@ function App() {
     answers: [],
     showResults: false,
     error: '',
+    score: 0,
   };
 
   const [state, dispatch] = useReducer(quizReducer, initialState);
@@ -73,6 +74,7 @@ function App() {
 
   const renderResultMark = (question, answer) => {
     if (question.correct_answer === answer.answer) {
+      state.score++;
       return <span className="correct">Correct</span>;
     }
 
@@ -94,6 +96,7 @@ function App() {
   };
 
   const restart = () => {
+    state.score = 0;
     dispatch({ type: RESET_QUIZ });
   };
 
@@ -125,9 +128,11 @@ function App() {
       <div className="container results">
         <h2>Results</h2>
         <ul>{renderResultsData()}</ul>
+        <h3>Score: {state.score}</h3>
         <button className="btn btn-primary" onClick={restart}>
           Restart
                 </button>
+                <button>Submit Score</button>
       </div>
     );
   } else {
@@ -141,11 +146,12 @@ function App() {
           <Question />
           {renderError()}
           <Answers />
-          <button className="btn btn-primary" onClick={next}>
+          <button className="btn btn-stop" onClick={next}>
             Confirm and Continue
                     </button>
-                    <img className='hello' src = {require("./image/textBubble.png")} />
-                    <img className='goodbye' src = {require("./image/rhino.png")} />
+                    <img className='hello' src = {require("./image/textBubble.png")} alt='hello'/>
+                    <span><img className='goodbye' src = {require("./image/rhino.png")} alt='hello' />
+                    <img className='grassy' src = {require("./image/grass.png")} alt='hello'/></span>
         </div>
       </QuizContext.Provider>
     );
