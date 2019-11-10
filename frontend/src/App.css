@@ -4,13 +4,14 @@ body {
     
 }
 
-
 h1,
 h2 {
     margin: 10px;
     margin-bottom: 25px;
     font-family: 'Montserrat Alternates', sans-serif;
     text-shadow: 2px 2px 2px #86c6ec;
+    text-align: center;
+    color: #332b22;
 }
 
 .answer {
@@ -155,3 +156,54 @@ h2 {
     margin-left: auto;
     padding-top: 5%;
 }
+
+.submit-form {
+    background: #9cbbb6e8;
+    position: absolute;
+    top: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 280px;
+    border: 6px solid #6d6565;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 10px 10px 10px grey;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.pop {
+    color: #4f4c4c;
+    background-color: #07ff45;
+    font-weight: bold;
+    border-radius: 42%;
+    box-shadow: 13px 11px 7px #0000009e;
+    outline: none; 
+    float: right;
+    margin: 30px 25px 20px 18px;
+}
+
+.pop:hover {
+    color: #4f4c4c;
+    background-color: #06bb33;
+    font-weight: bold;
+    border-radius: 42%;
+    box-shadow: 13px 11px 7px #0000009e;
+    outline: none;
+    float: right;  
+}
+
+.drink {
+text-align: center;
+}
+
+.dog {
+    text-align: center;
+    border-radius: 5%;
+    background-color: rgb(218, 217, 216);
+}
+
+
+
+

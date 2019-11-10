@@ -29,9 +29,12 @@ export default class SubmitForm extends React.Component {
 
   render() {
     return (
+    <div className='submit-form'>
       <form>
         <div>
-          <input
+          <h1 id='soda'>YOUR SCORE!: {this.props.userscore}</h1>
+          <div className='drink'>
+          <input className='dog'
             type='text'
             id='name'
             name='name'
@@ -40,9 +43,9 @@ export default class SubmitForm extends React.Component {
             value={this.state.name}
             required
           />
-        </div>
+        
         <div>
-          <input
+          <input className='dog'
             type='email'
             name='email'
             id='email'
@@ -51,9 +54,12 @@ export default class SubmitForm extends React.Component {
             value={this.state.email}
             required
           />
+          </div>
+          </div>
         </div>
-        <button onClick={this.sendScoreToDB}>Submit!</button>
+        <button className='pop' onClick={this.sendScoreToDB}>Submit!</button>
       </form>
+      </div>
     );
   }
 }
