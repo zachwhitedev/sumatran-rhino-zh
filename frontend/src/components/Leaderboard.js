@@ -27,6 +27,8 @@ export default class Leaderboard extends React.Component {
         <h4>1. {this.state.scores[0].name} ||{this.state.scores[0].score}||</h4>
         <h4>2. {this.state.scores[1].name} ||{this.state.scores[1].score}||</h4>
         <h4>3. {this.state.scores[2].name} ||{this.state.scores[2].score}||</h4>
+        <h4>4. {this.state.scores[3].name} ||{this.state.scores[3].score}||</h4>
+        <h4>5. {this.state.scores[4].name} ||{this.state.scores[4].score}||</h4>
       </div>
     );
     } else {
