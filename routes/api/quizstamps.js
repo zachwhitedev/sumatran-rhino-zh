@@ -8,7 +8,8 @@ const Quizstamp = require('../../models/Quizstamp');
 // @desc Get All Items
 // @access Public
 router.get('/', (req, res) => {
-  QuizStamp.find()
+  Quizstamp.find()
+    .sort({ score: -1 })
     .select('-email')
     .then(quizstamps => res.json(quizstamps));
 });

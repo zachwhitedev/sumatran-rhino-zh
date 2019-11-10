@@ -90,3 +90,15 @@ h2 {
     border-radius: 4px;
     padding: 10px;
 }
+
+.leaderboard {
+    background: rgb(255, 239, 219);
+    position: absolute;
+    z-index: -1;
+    bottom: 50px;
+    left: 10px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px;
+}
