@@ -76,3 +76,17 @@ h2 {
     margin-left: 10%;
     margin-left: 155px;
 }
+
+.submit-form {
+    background: rgb(255, 239, 219);
+    position: absolute;
+    top: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 280px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px;
+}

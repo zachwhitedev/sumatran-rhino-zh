@@ -29,31 +29,34 @@ export default class SubmitForm extends React.Component {
 
   render() {
     return (
-      <form>
-        <div>
-          <input
-            type='text'
-            id='name'
-            name='name'
-            placeholder='name'
-            onChange={this.handleChange}
-            value={this.state.name}
-            required
-          />
-        </div>
-        <div>
-          <input
-            type='email'
-            name='email'
-            id='email'
-            placeholder='email'
-            onChange={this.handleChange}
-            value={this.state.email}
-            required
-          />
-        </div>
-        <button onClick={this.sendScoreToDB}>Submit!</button>
-      </form>
+      <div className='submit-form'>
+        <form>
+          <div>
+            <h2>Your Score: {this.props.userscore}</h2>
+            <input
+              type='text'
+              id='name'
+              name='name'
+              placeholder='name'
+              onChange={this.handleChange}
+              value={this.state.name}
+              required
+            />
+          </div>
+          <div>
+            <input
+              type='email'
+              name='email'
+              id='email'
+              placeholder='email'
+              onChange={this.handleChange}
+              value={this.state.email}
+              required
+            />
+          </div>
+          <button onClick={this.sendScoreToDB}>Submit</button>
+        </form>
+      </div>
     );
   }
 }

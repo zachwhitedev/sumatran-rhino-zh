@@ -20,69 +20,69 @@ import './App.css';
 
 function App() {
   const questions = [
-    {
-      id: 1,
-      question: 'What is Sumatra?',
-      answer_a: 'A country in Africa.',
-      answer_b: 'A type of Tibetan yoga.',
-      answer_c: 'An island south of Malaysia.',
-      answer_d: 'A city in India',
-      correct_answer: 'c'
-    },
-    {
-      id: 2,
-      question: 'Do rhinos have one or two horns?',
-      answer_a: '1',
-      answer_b: '2',
-      answer_c: '3',
-      answer_d: 'a & b (depends on the species!)',
-      correct_answer: 'd'
-    },
-    {
-      id: 3,
-      question: 'On average, how much does a Sumatran rhino weigh?',
-      answer_a: '1000-2000 lbs. (smallest rhino in the world!)',
-      answer_b: '2000-3000 lbs.',
-      answer_c: '3000-4000 lbs. (they are HUGE!)',
-      answer_d: 'About the size of a rhino.',
-      correct_answer: 'a'
-    },
-    {
-      id: 4,
-      question: 'A Sumatran rhino\'s hide is...',
-      answer_a: 'tough and gray',
-      answer_b: 'dark green and scaly',
-      answer_c: 'red-brown with patches of hair',
-      answer_d: 'pink and shiny',
-      correct_answer: 'c'
-    },
-    {
-      id: 5,
-      question: 'How many Sumatran rhinos are in the world?',
-      answer_a: 'None- they\'re extinct!',
-      answer_b: 'Fewer than 100.',
-      answer_c: 'Between 100-200',
-      answer_d: '10 jabillion.',
-      correct_answer: 'b'
-    },
-    {
-      id: 6,
-      question: 'Why do Sumatran rhinos like mud so much?',
-      answer_a: 'It exfoliates their pores, preventing acne.',
-      answer_b: 'It keeps their hide cool!',
-      answer_c: 'It protects them from insects.',
-      answer_d: 'Both b & c',
-      correct_answer: 'd'
-    },
-    {
-      id: 7,
-      question: 'What does a Sumatran rhino eat?',
-      answer_a: 'Klondike bars.',
-      answer_b: 'Human flesh. They are blood-thirsty maneaters.',
-      answer_c: 'Twigs and berries, with a love for mangos and figs!',
-      answer_d: 'Omnivorous- they\ll eat whatever comes their way.',
-      correct_answer: 'c'
-    },
+    // {
+    //   id: 1,
+    //   question: 'What is Sumatra?',
+    //   answer_a: 'A country in Africa.',
+    //   answer_b: 'A type of Tibetan yoga.',
+    //   answer_c: 'An island south of Malaysia.',
+    //   answer_d: 'A city in India',
+    //   correct_answer: 'c'
+    // },
+    // {
+    //   id: 2,
+    //   question: 'Do rhinos have one or two horns?',
+    //   answer_a: '1',
+    //   answer_b: '2',
+    //   answer_c: '3',
+    //   answer_d: 'a & b (depends on the species!)',
+    //   correct_answer: 'd'
+    // },
+    // {
+    //   id: 3,
+    //   question: 'On average, how much does a Sumatran rhino weigh?',
+    //   answer_a: '1000-2000 lbs. (smallest rhino in the world!)',
+    //   answer_b: '2000-3000 lbs.',
+    //   answer_c: '3000-4000 lbs. (they are HUGE!)',
+    //   answer_d: 'About the size of a rhino.',
+    //   correct_answer: 'a'
+    // },
+    // {
+    //   id: 4,
+    //   question: 'A Sumatran rhino\'s hide is...',
+    //   answer_a: 'tough and gray',
+    //   answer_b: 'dark green and scaly',
+    //   answer_c: 'red-brown with patches of hair',
+    //   answer_d: 'purple and shiny',
+    //   correct_answer: 'c'
+    // },
+    // {
+    //   id: 5,
+    //   question: 'How many Sumatran rhinos are in the world?',
+    //   answer_a: 'None- they\'re extinct!',
+    //   answer_b: 'Fewer than 100.',
+    //   answer_c: 'Between 100-200',
+    //   answer_d: '10 jabillion.',
+    //   correct_answer: 'b'
+    // },
+    // {
+    //   id: 6,
+    //   question: 'Why do Sumatran rhinos like mud so much?',
+    //   answer_a: 'It exfoliates their pores, preventing acne.',
+    //   answer_b: 'It keeps their hide cool!',
+    //   answer_c: 'It protects them from insects.',
+    //   answer_d: 'Both b & c',
+    //   correct_answer: 'd'
+    // },
+    // {
+    //   id: 7,
+    //   question: 'What does a Sumatran rhino eat?',
+    //   answer_a: 'Klondike bars.',
+    //   answer_b: 'Human flesh. They are blood-thirsty maneaters.',
+    //   answer_c: 'Twigs and berries, with a love for mangos and figs!',
+    //   answer_d: 'Omnivorous- they\'ll eat whatever comes their way.',
+    //   correct_answer: 'c'
+    // },
     {
       id: 8,
       question: 'How fast is a Sumatran rhino?',
@@ -207,8 +207,8 @@ function App() {
           <button className='btn btn-primary' onClick={next}>
             Submit
           </button>
-          <img className='hello' src={require('./image/textBubble.png')} />
-          <img className='goodbye' src={require('./image/rhino.png')} />
+          <img className='hello' src={require('./image/textBubble.png')} alt='bruh'/>
+          <img className='goodbye' src={require('./image/rhino.png')} alt='bruh'/>
         </div>
       </QuizContext.Provider>
     );
