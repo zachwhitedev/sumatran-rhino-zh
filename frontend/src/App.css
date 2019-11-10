@@ -1,5 +1,6 @@
 body {
     background-color: rgb(218, 217, 216);
+    
 }
 
 h1,
@@ -12,9 +13,10 @@ h2 {
 
 .answer {
     border: 1px solid #3b88ca;
-    padding: 5px 10px 5px 20px;
-    width: 347px;
+    padding: 5px 2px 5px 28px;
+    width: 346px;
     position: relative;
+    text-align: left;
 }
 
 .answer.selected {
@@ -33,7 +35,7 @@ h2 {
 }
 
 .results span.correct {
-    color: #c8ffbb;
+    color: #2f7b1d;
 }
 
 .results span.failed {
@@ -72,6 +74,7 @@ h2 {
     border-radius: 42%;
     box-shadow: 13px 11px 7px #0000009e;
     outline: none;
+    
 }
 .btn-stop:hover {
     color: #4f4c4c;
@@ -91,6 +94,7 @@ h2 {
 .goodbye {
     max-width: 175px;
     margin-left: 155px;
+    margin-top: -10%;
 }
 
 .btn:focus {
@@ -100,4 +104,52 @@ h2 {
 .grassy {
     max-width: 45%;
     margin-top: -36%;
+}
+
+.sloppy {
+    color: #4f4c4c;
+    background-color: #07ff45;
+    font-weight: bold;
+    border-radius: 42%;
+    box-shadow: 13px 11px 7px #0000009e;
+    outline: none; 
+    float: right;
+}
+
+.sloppy:hover {
+    color: #4f4c4c;
+    background-color: #06bb33;
+    font-weight: bold;
+    border-radius: 42%;
+    box-shadow: 13px 11px 7px #0000009e;
+    outline: none;
+    float: right;
+}
+
+.btn-go {
+    color: #463d3d;
+    background-color: #f9b230;
+    font-weight: bold;
+    border-radius: 42%;
+    box-shadow: 13px 11px 7px #0000009e;
+    outline: none;
+    float: right;
+}
+
+.btn-go:hover {
+    color: #463d3d;
+    background-color: #d29527;
+    font-weight: bold;
+    border-radius: 42%;
+    box-shadow: 13px 11px 7px #0000009e;
+    outline: none;
+    float: right;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 5%;
 }

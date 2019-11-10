@@ -126,13 +126,14 @@ function App() {
   if (showResults) {
     return (
       <div className="container results">
+      <img className='' src = {require("./image/cloud_PNG.png")} alt='hello'/>
         <h2>Results</h2>
         <ul>{renderResultsData()}</ul>
         <h3>Score: {state.score}</h3>
-        <button className="btn btn-primary" onClick={restart}>
+                <button className='sloppy btn'>Submit Score</button>
+        <button className="btn btn-go" onClick={restart}>
           Restart
                 </button>
-                <button>Submit Score</button>
       </div>
     );
   } else {
