@@ -144,7 +144,10 @@ function App() {
           <button className="btn btn-primary" onClick={next}>
             Confirm and Continue
                     </button>
-                    <img className='hello' src = {require("./image/textBubble.png")} />
+                    <div className="hello">
+                    <img className="yo" src={require("./image/textBubble.png")}  />
+                    <div className="centered">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                    </div>
                     <img className='goodbye' src = {require("./image/rhino.png")} />
         </div>
       </QuizContext.Provider>

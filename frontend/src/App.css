@@ -1,7 +1,43 @@
 .container {
  
 }
-hello
+@keyframes leaves {
+    0% {
+        transform: scale(0);
+        
+    }
+    100% {
+        transform: scale(1);
+        
+    }
+}
+  .hello {
+      position: relative;
+      text-align: center;
+      color: black;
+      animation-name: leaves;
+      animation-duration:300ms;
+      animation-timing-function: ease-in-out;
+      animation-delay:0s;
+      animation-iteration-count:1;
+      animation-direction:normal;
+      animation-fill-mode:forwards;
+  }
+
+  .centered { 
+    font-family: 'Indie Flower', cursive;   
+    position: absolute;
+    overflow: scroll;
+    width: 30%;
+    top: 45%;
+    left: 64%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 80px;
+  }
+  .yo{
+    width: 210px;
+  }
 h1,
 h2 {
     margin: 10px;
